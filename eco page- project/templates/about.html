@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            border: 10px solid #333;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #777;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .team-member {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .team-member h3 {
+            color: #555;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            margin-bottom: 5px;
+        }
+
+        .team-member p.role {
+            color: #888;
+        }
+
+        .team-member p.description {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>About Us</h1>
+    <p>
+        We are a dedicated team of friends passionate about waste management and environmental sustainability.
+        Our mission is to make a positive impact on the environment by promoting responsible waste disposal,
+        recycling, and education.
+    </p>
+    <p>
+        At <span class="highlight">Team Green Earth</span>, we believe that everyone has a role to play in
+        preserving our planet for future generations. We aim to raise awareness about the importance of waste
+        management and empower individuals and communities to adopt sustainable practices.
+    </p>
+    <h2>Meet Our Team</h2>
+    {% for member in team_members %}
+    <div class="team-member">
+        <h3>{{ member.name }}</h3>
+        <p class="role">{{ member.role }}</p>
+        <p class="description">{{ member.description }}</p>
+    </div>
+    {% endfor %}
+    <p>
+        We are committed to making a difference and creating a sustainable future. Join us in our journey towards a cleaner and greener Earth!
+    </p>
+</body>
+</html>

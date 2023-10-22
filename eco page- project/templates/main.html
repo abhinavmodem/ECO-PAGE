@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>ECO PAGE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="{{ url_for('static', filename='recycle2.png') }}" alt="logo" width="60px">
+            <nav>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="{{ url_for('contact_us') }}">CONTACT US</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                    <li><a href="{{ url_for('logout') }}">LOGOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>PURIFY ME</h1>
+                <h2>
+                    "A HEALTHIER LIFESTYLE. A BETTER ENVIRONMENT. A DIFFERENT OUTLOOK ON LIFE."
+                </h2>
+
+            </div>
+/            <div class="col">
+                <a href="{{ url_for('submit_waste') }}" class="card card1">
+                    <h3>DEPOSIT WASTE</h3>
+                </a>
+                <br>
+                <a href="{{ url_for('coins') }}" class="card card3">
+                    <h3>MY CREDITS</h3>
+                </a>
+                <br>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

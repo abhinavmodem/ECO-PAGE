@@ -1,0 +1,30 @@
+/* Add a CSS class to style the jejer element */
+.jejer {
+    border-radius:5;
+  text-align: center;
+  background:#44ad45;
+  color: pink;    /* Set the text color to dark blue */
+  font-size: 24px;    /* Set the font size to medium */
+}
+
+body {
+    background-color: #f8f9fa;
+    }
+    .container {
+    margin-top: 50px;
+    }
+    h1 {
+        margin-right: 126px;
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    form {
+    margin-top: 41px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #888888;
+    }
+    label {
+    font-weight: bold;
+    }

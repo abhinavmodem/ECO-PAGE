@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Credit Transactions</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  </head>
+
+  <body>
+    <header>
+      <h1 style="font-family:Ubuntu;" align = "center">My Credits</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2 style="font-family:Ubuntu;" align = "center">Welcome to My Credits</h2>
+      <form class="image">
+        <label for="total_credits">Total credits:</label>
+        <p>{{ total_credits }}</p>
+        <img src="https://th.bing.com/th?q=Reward+Cartoon&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247">
+      </form>
+    </main>
+  </body>
+</html>

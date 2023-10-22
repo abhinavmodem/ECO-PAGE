@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: rgb(36, 183, 228);
+    color: rgb(252, 249, 249);
+    padding: 20px;
+    background-image:url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/d10ded16218521.562d0c9e1fe8c.jpg);
+  }
+  
+  nav {
+    background-color: rgb(208, 221, 31);
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: rgb(34, 15, 15);
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    color: rgb(27, 21, 21);
+    background-color: rgb(110, 82, 82);
+  }
+  
+  main {
+    margin: 20px;
+  }
+  
+  form {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid rgb(61, 42, 42);
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    border: 1px solid rgb(190, 47, 47);
+    border-radius: 5px;
+  }
+  
+  input[type="submit"] {
+    padding: 5px 10px;
+    background-color: rgb(178, 187, 57);
+    color: rgb(31, 34, 31);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: rgb(218, 185, 4);
+    color: rgb(109, 209, 204);
+  }
+
+  img{
+      border-radius: 50px;
+      align-items: "center";
+  }
+  
+  .image{
+      align-items: center;
+      justify-content: "center";
+  }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Submit Waste</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='submit_style.css') }}">
+</head>
+<body>
+<div class="container">
+
+<div class="float-left" style="padding: 5px;">
+  <!-- Home button with card-like padding around the word "Home" -->
+  <span class="card" style="padding: 5px;">
+    <a href="{{ url_for('index') }}" class="btn btn-link btn-lg">
+      <span class="bg-light-green" style="padding: 5px;">Home</span>
+    </a>
+  </span>
+</div>
+
+  <h1>Submit Waste</h1>
+
+  <form method="POST" action="{{ url_for('submit_waste') }}">
+      <p>Please fill out the form to categorize your waste:</p>
+      <div class="jejer">{{jejer}}</div>
+    <div class="form-group">
+      <label for="location">Waste location:</label>
+      <input type="text" class="form-control" id="location" name="location">
+    </div>
+
+    <div class="form-group">
+      <label for="bnb">Is the waste biodegradable or non-biodegradable?</label>
+      <select class="form-control" id="bnb" name="bnb">
+        <option value="biodegradable">Biodegradable</option>
+        <option value="non-biodegradable">Non-biodegradable</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="type">What type of waste is it?</label>
+      <select class="form-control" id="type" name="type">
+        <option value="paper">Paper</option>
+        <option value="plastic">Plastic</option>
+        <option value="metal">Metal</option>
+        <option value="fabric">Fabric</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="amount">Enter the amount of waste(kg):</label>
+      <input type="number" class="form-control" id="amount" name="amount">
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+
+  {% if error_message %}
+    <h1 style="color: red;">{{ error_message }}</h1>
+  {% endif %}
+</div>
+</body>
+</html>
