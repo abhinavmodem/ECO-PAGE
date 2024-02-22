@@ -1,5 +1,3 @@
-(BEST VIEWED ON PC)
-🔗 Visit Eco Page: https://lnkd.in/g8yQHQCp
 
 
 🌱 Eco Page: Empowering Sustainability through Technology 🌍
