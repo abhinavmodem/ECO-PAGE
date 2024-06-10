@@ -1,10 +1,9 @@
-/* Add a CSS class to style the jejer element */
 .jejer {
     border-radius:5;
   text-align: center;
   background:#44ad45;
-  color: pink;    /* Set the text color to dark blue */
-  font-size: 24px;    /* Set the font size to medium */
+  color: pink;    
+  font-size: 24px;    
 }
 
 body {
