@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 app.secret_key = '9154224668'
 
-# Define your database connection details here
 db_host = "abhinav1.mysql.pythonanywhere-services.com"
 db_user = "abhinav1"
 db_password = "@abhi2003"
@@ -75,11 +74,8 @@ def login():
         username = request.form.get('username')
         password = request.form.get('password')
 
-
-
         conn = pymysql.connect(host=db_host, user=db_user, password=db_password, database=db_name)
         cursor = conn.cursor()
-
 
         query = f"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'"
         cursor.execute(query)
@@ -93,7 +89,7 @@ def login():
             return redirect(url_for('index'))
         else:
             message = "Invalid Credentials"
-            return render_template('login.html',message= message)
+            return render_template('login.html', message=message)
 
     return render_template('login.html')
 
@@ -109,21 +105,16 @@ def submit_waste():
             username = session['username']
             location = request.form.get('location')
             bnb = request.form.get('bnb')
-            type = request.form.get('type')  # Replaced 'waste_type' with 'type'
+            type = request.form.get('type')
             amount = float(request.form.get('amount'))
 
-            # Update your MySQL database connection details
             conn = pymysql.connect(host=db_host, user=db_user, password=db_password, database=db_name)
             cursor = conn.cursor()
 
-            # Check if a record with the username exists and all values are null
-
-                # Update the existing record with new values
-            update_query = f"UPDATE wastesubmit1 SET location = '{location}', bnb = '{bnb}', type = '{type}', amount = {amount} WHERE username = '{username}'"  # Replaced 'waste_type' with 'type'
+            update_query = f"UPDATE wastesubmit1 SET location = '{location}', bnb = '{bnb}', type = '{type}', amount = {amount} WHERE username = '{username}'"
             cursor.execute(update_query)
             conn.commit()
 
-                # Calculate and update user's credits
             query = f"SELECT coins FROM wastesubmit1 WHERE username = '{username}'"
             cursor.execute(query)
             row = cursor.fetchone()
@@ -134,21 +125,15 @@ def submit_waste():
                 update_coins_query = f"UPDATE wastesubmit1 SET coins = {new_coins} WHERE username = '{username}'"
                 cursor.execute(update_coins_query)
                 conn.commit()
-                jejer="Submitted Succesfully"
-                return render_template('submit_waste.html',jejer=jejer)
-
+                jejer = "Submitted Succesfully"
+                return render_template('submit_waste.html', jejer=jejer)
 
             cursor.close()
             conn.close()
 
         return render_template('submit_waste.html')
     else:
-        # Handle the case where the user is not logged in
         return redirect(url_for('login'))
-
-
-
-
 
 @app.route('/coins', methods=['GET'])
 def coins():
