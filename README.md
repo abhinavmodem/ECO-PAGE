@@ -33,3 +33,27 @@ We're passionate about using technology to make a positive impact, and Eco Page 
 Thank you for joining us on this eco-friendly journey! 🌎🌿
 
 #EcoPage #Sustainability #WebDevelopment #EnvironmentalAwareness #TechForGood
+
+
+
+
+Database structure:
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    email_address VARCHAR(255) NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE wastesubmit1 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    location VARCHAR(255),
+    bnb VARCHAR(255),
+    type VARCHAR(255),
+    amount FLOAT,
+    coins INT DEFAULT 0,
+    FOREIGN KEY (username) REFERENCES users(username)
+);
+
