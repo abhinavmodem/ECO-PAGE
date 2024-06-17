@@ -16,7 +16,6 @@ Project Highlights:
 
 🌐 Web Development: The project showcases our collective skills in front-end (HTML, CSS, Bootstrap, and JavaScript) and back-end (Flask and MySQL) development.
 
-🚀 Hosting: Eco Page is live and hosted for real-world use, demonstrating our ability to deploy web applications.
 
 🙌 Contributors: A special shout-out to my dedicated team of contributors:
 
